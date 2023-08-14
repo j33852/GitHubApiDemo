@@ -13,8 +13,8 @@ class HttpRequest {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        // personal access token
-        request.addValue("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", forHTTPHeaderField: "Authorization")
+        // TODO: personal access tokenを入力する必要があります。
+        request.addValue("", forHTTPHeaderField: "Authorization")
         
         return request
     }
