@@ -15,13 +15,13 @@ struct ErrorView: View {
     var body: some View {
         VStack {
             VStack {
-                Text("Ooops...")
+                Text("注意...")
                     .font(.title2)
                     .bold()
                     .padding()
                 
                 Group {
-                    Text("We have an error:\n") + Text(error.description).bold()
+                    Text("エラーが発生しています:\n") + Text(error.description).bold()
                 }.multilineTextAlignment(.center).padding(.bottom, 16)
                 
                 Button(action: {

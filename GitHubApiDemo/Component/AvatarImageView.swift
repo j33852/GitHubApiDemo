@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AvatarImageView: View {
     
-    @State var size: CGFloat = 0
-    @State var url: String = ""
+    var size: CGFloat = 0
+    var url: String = ""
     
     var body: some View {
         

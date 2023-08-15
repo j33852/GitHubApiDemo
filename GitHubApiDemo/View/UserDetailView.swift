@@ -10,7 +10,6 @@ import SwiftUI
 struct UserDetailView: View {
     @Environment(\.openURL) var openURL
     
-    @State private var orientation = UIDeviceOrientation.unknown
     @StateObject var userDetailViewModel: UserDetailViewModel = UserDetailViewModel()
     @StateObject var reposDetailViewModel: ReposDetailViewModel = ReposDetailViewModel()
     
@@ -91,7 +90,7 @@ extension UserDetailView {
                         .scaledToFit()
                         .frame(width: 20)
                         .foregroundColor(.blue)
-                    Text("Followes:\(userDetailViewModel.userDetail?.followers ?? 0)．Following: \(userDetailViewModel.userDetail?.following ?? 0)")
+                    Text("Followers:\(userDetailViewModel.userDetail?.followers ?? 0)．Following: \(userDetailViewModel.userDetail?.following ?? 0)")
                         .font(.system(.caption2, design: .rounded).bold())
                         .fontWeight(.light)
                 }

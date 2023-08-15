@@ -35,7 +35,7 @@ struct SearchUsersView: View {
                 }
                 .listStyle(.plain)
                 .navigationTitle(UsedWord.userSearch)
-                .searchable(text: $searchText)
+                .searchable(text: $searchText, prompt: "検索")
                 .onSubmit(of: .search) {
                     guard !searchText.isEmpty else {
                         print("Empty text")
